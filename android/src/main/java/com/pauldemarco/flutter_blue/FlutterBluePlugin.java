@@ -243,7 +243,8 @@ public class FlutterBluePlugin implements FlutterPlugin, ActivityAware, MethodCa
                     ActivityCompat.requestPermissions(
                             activityBinding.getActivity(),
                             new String[] {
-                                    Manifest.permission.ACCESS_FINE_LOCATION
+                                    Manifest.permission.ACCESS_FINE_LOCATION,
+                                    Manifest.permission.BLUETOOTH_SCAN
                             },
                             REQUEST_FINE_LOCATION_PERMISSIONS);
                     pendingCall = call;
