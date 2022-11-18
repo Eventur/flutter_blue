@@ -239,12 +239,14 @@ public class FlutterBluePlugin implements FlutterPlugin, ActivityAware, MethodCa
             case "startScan":
             {
                 if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION)
+                        != PackageManager.PERMISSION_GRANTED
+                        || ContextCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH_SCAN)
                         != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(
                             activityBinding.getActivity(),
                             new String[] {
                                     Manifest.permission.ACCESS_FINE_LOCATION,
-                                    Manifest.permission.BLUETOOTH
+                                    Manifest.permission.BLUETOOTH_SCAN
                             },
                             REQUEST_FINE_LOCATION_PERMISSIONS);
                     pendingCall = call;
