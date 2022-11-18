@@ -40,7 +40,12 @@ android {
 
 protobuf {
     protoc {
-        artifact = 'com.google.protobuf:protoc:3.12.0'
+        // for apple m1, add protoc_platform=osx-x86_64 in $HOME/.gradle/gradle.properties
+        if (project.hasProperty('protoc_platform')) {
+            artifact = "com.google.protobuf:protoc:3.12.0:${protoc_platform}"
+        } else {
+            artifact = "com.google.protobuf:protoc:3.12.0"
+        }
     }
     generateProtoTasks {
         all().each { task ->
