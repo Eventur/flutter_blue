@@ -1,6 +1,6 @@
 #
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html.
-# Run `pod lib lint flutter_blue.podspec' to validate before publishing.
+# Run `pod lib lint flutter_blue.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_blue'
@@ -16,7 +16,7 @@ Bluetooth Low Energy plugin for Flutter.
   s.source_files = 'Classes/**/*', 'gen/**/*'
   s.public_header_files = 'Classes/**/*.h', 'gen/**/*.h'
   s.dependency 'Flutter'
-  s.platform = :ios, '8.0'
+  s.platform = :ios, '11.0'
   s.framework = 'CoreBluetooth'
 
   s.subspec "Protos" do |ss|
