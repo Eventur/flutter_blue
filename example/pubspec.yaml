@@ -3,17 +3,18 @@ description: Demonstrates how to use the flutter_blue plugin.
 publish_to: "none"
 
 environment:
-  sdk: '>=2.12.0 <4.0.0'
+  sdk: '>=2.19.6 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
   flutter_blue:
     path: ../
+
+dev_dependencies:
+  flutter_lints: ^3.0.1
+  flutter_test:
+    sdk: flutter
 
 flutter:
   uses-material-design: true
